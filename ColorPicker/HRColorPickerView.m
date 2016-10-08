@@ -128,6 +128,7 @@ typedef struct timeval timeval;
         [self addSubview:_brightnessSlider];
     }
     
+    _brightnessSlider.brightnessLowerLimit = @0.0;
     return _brightnessSlider;
 }
 
