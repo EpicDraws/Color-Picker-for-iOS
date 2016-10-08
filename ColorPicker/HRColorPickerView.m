@@ -120,13 +120,14 @@ typedef struct timeval timeval;
 - (UIControl <HRBrightnessSlider> *)brightnessSlider {
     if (!_brightnessSlider) {
         _brightnessSlider = [[HRBrightnessSlider alloc] init];
-        _brightnessSlider.brightnessLowerLimit = @0.4;
+        _brightnessSlider.brightnessLowerLimit = @0.0;
         _brightnessSlider.color = self.color;
         [_brightnessSlider addTarget:self
                               action:@selector(brightnessChanged:)
                     forControlEvents:UIControlEventValueChanged];
         [self addSubview:_brightnessSlider];
     }
+    
     return _brightnessSlider;
 }
 
